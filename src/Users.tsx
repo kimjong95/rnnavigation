@@ -1,14 +1,16 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { Button, Text, View } from 'react-native';
-import { RootStackParams } from '../App';
+import { UsersNavigationProps, UserRouteProps } from './RootRouter';
 
-export type UsersScreenProps = NativeStackScreenProps<RootStackParams, 'Users'>;
+export default function Users() {
+  //
+  const navigation = useNavigation<UsersNavigationProps>();
+  const route = useRoute<UserRouteProps>();
 
-export default function Users({ navigation, route }: UsersScreenProps) {
   return (
     <View>
-      <Text>Users: {route.params.codeName} </Text>
+      <Text>Users: {route.params?.codeName} </Text>
       <Button title="go back" onPress={() => navigation.goBack()} />
     </View>
   );

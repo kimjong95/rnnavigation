@@ -1,12 +1,11 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Button, Text, View } from 'react-native';
-import { RootStackParams } from '../App';
+import { useNavigation } from '@react-navigation/native';
+import { HomeNavigationProps } from './RootRouter';
 
-export type UsersScreenProps = NativeStackScreenProps<RootStackParams, 'Home'>;
-
-export default function Home({ navigation }: UsersScreenProps) {
+export default function Home() {
   //
+  const navigation = useNavigation<HomeNavigationProps>();
 
   return (
     <View>
