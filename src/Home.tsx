@@ -11,7 +11,15 @@ export default function Home({ navigation }: UsersScreenProps) {
   return (
     <View>
       <Text>Home</Text>
-      <Button title="Go to Users" onPress={() => navigation.navigate('Users')} />
+      <Button
+        title="Go to Users"
+        onPress={() =>
+          navigation.navigate('Users', {
+            id: 23,
+            codeName: 'Black mamba',
+          })
+        }
+      />
     </View>
   );
 }

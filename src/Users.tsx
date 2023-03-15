@@ -5,10 +5,10 @@ import { RootStackParams } from '../App';
 
 export type UsersScreenProps = NativeStackScreenProps<RootStackParams, 'Users'>;
 
-export default function Users({ navigation }: UsersScreenProps) {
+export default function Users({ navigation, route }: UsersScreenProps) {
   return (
     <View>
-      <Text>Users</Text>
+      <Text>Users: {route.params.codeName} </Text>
       <Button title="go back" onPress={() => navigation.goBack()} />
     </View>
   );

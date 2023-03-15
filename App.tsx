@@ -6,7 +6,10 @@ import Users from './src/Users';
 
 export type RootStackParams = {
   Home: undefined;
-  Users: undefined;
+  Users: {
+    id: number;
+    codeName: string;
+  };
 };
 
 const Stack = createNativeStackNavigator<RootStackParams>();
