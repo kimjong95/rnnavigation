@@ -28,7 +28,7 @@ export default function RootRouter() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Users" component={Users} />
+        <Stack.Screen name="Users" component={Users} options={{ title: 'x-users' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

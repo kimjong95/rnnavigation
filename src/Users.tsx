@@ -12,6 +12,17 @@ export default function Users() {
     <View>
       <Text>Users: {route.params?.codeName} </Text>
       <Button title="go back" onPress={() => navigation.goBack()} />
+      <Button
+        title="change header"
+        onPress={() =>
+          navigation.setOptions({
+            title: 'something else',
+            headerStyle: {
+              backgroundColor: 'skyblue',
+            },
+          })
+        }
+      />
     </View>
   );
 }
